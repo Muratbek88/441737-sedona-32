@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -25,11 +26,13 @@
           </li>
         </ul>
        
-        <div class="page-header-logo">
+        <div class="navigation-item-logo">
           <span class="vissually-hidden">
             Логотип в навигации    
           </span>
-          <img src="#" alt="Логотип">
+          <a class="navigation-link-logo">
+            <img class="navigation-logo" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип">
+          </a>
         </div>
 
         <ul class="navigation-list navigation-user">
@@ -59,9 +62,10 @@
     </header>
 
     <main>
-      <div class="main-logo">
-        <h1 class="visually-hidden">Логотип «Sedona»</h1>
-        <img src="#" alt="Логотип Sedona">
+      <div class="index-background">
+        <h1 class="visually-hidden">«Sedona»</h1>
+        <img class="index-background-image" src="img/index-background.jpg" width="1200" height="485" alt="Горная местность «Sedona»">
+        <p class="welcome-image"></p>
       </div>
       <section class="main-text">
         <h2>Седона — небольшой городок в Аризоне,заслуживающий большего!</h2>
@@ -74,21 +78,24 @@
           <h3 class="advantage-title">Настоящий городок</h3>
           <p class="advantage-number">№1</p>
           <p class="advantage-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-          <img src="#" alt="Вид городка">
+          <img src="img/photo-1.jpg" width="800" height="384" alt="Вид городка">
         </section>
         
         <section class="advantage-second">
           <ul class="advantage-list">
             <li class="advantage-item">
+              <img class="icon-house" src="img/icon-1.png" width="75" height="72" alt="Иконка жилье">
               <h3>Жилье</h3>
               <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
             <li class="advantage-item">
+              <img class="icon-food" src="img/icon-2.png" width="74" height="70" alt="Иконка еда">
               <h3>Еда</h3>
               <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="advantage-item">
-              <h3>Еда</h3>
+              <img class="icon-souvenir" src="img/icon-3.png" width="64" height="76" alt="Иконка сувенир">
+              <h3>Сувениры</h3>
               <p>Не только китайского, но и настоящего местного производства!</p>
             </li>
           </ul>
@@ -98,21 +105,24 @@
           <h3 class="advantage-title">Там есть мост дьявола</h3>
           <p class="advantage-number">№2</p>
           <p class="advantage-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-          <img src="#" alt="Вид природы">
+          <img src="img/photo-2.jpg" width="800" height="384" alt="Вид природы">
         </section>
 
         <section class="advantage-forth">
           <ul class="advantage-list">
             <li class="advantage-item">
               <h3>Небольшая площадь</h3>
+              <p>-№3-</p>
               <p>Все достопримечательности находятся очень близко</p>
             </li>
             <li class="advantage-item">
               <h3>Красивая дорога</h3>
+              <p>-№4-</p>
               <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="advantage-item">
               <h3>Мало туристов</h3>
+              <p>-№5-</p>
               <p>Большинство едет в Гранд Каньон и толпится там</p>
             </li>
           </ul>
@@ -133,7 +143,8 @@
 
     <footer class="page-footer">
       <h3>Подпишитесь на рассылку</h3>
-      <p>Только полезная информация и никакого спама, честное бойскаутское!</p>      
+      <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <img src="img/footer-background.jpg" width="1200" height="411" alt="Картинка «Sedona»">      
       <form class="page-footer-subscription">
         <input type="text" name="subscribe">
         <button class="button" type="button">Подписаться</button>
@@ -149,7 +160,7 @@
       <div class="footer-copyright">
         <b>Website by</b>
         <a class="button" href="#">
-          <img src="#" alt="Логотип HTML Academy">
+          <img src="img/logo-htmlacademy.svg" width="115" height="34" alt="Логотип HTML Academy">
         </a>
       </div>
     </footer>
