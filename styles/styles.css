@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -33,8 +41,391 @@ body {
   text-transform: uppercase;
 }
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto; 
+}
+
+/*header*/
+
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-list {
+  width: 250px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  width: 250px;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+
+/*main-index*/
+
+.index-background {
+  position: relative;
+}
+
 .welcome-image {
+  position: absolute;
+  top: 60px;
+  left: 372px;
   width: 458px;
   height: 352px;
   background-image: url(../img/welcome.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 458px;
+  text-align: center;
+}
+
+.vector-image {
+  position: absolute;
+  top: 474px;
+  width: 1200px;
+  min-height: 57px;
+  margin: 0 auto;
+  background-image: url(../img/vector.png);
+  background-repeat: no-repeat;
+}
+
+.main-text {
+  text-align:  center;
+}
+
+.advantage-first {
+  display: flex;
+  justify-content: center;
+}
+
+.advantage-first-item,
+.advantage-third-item {
+  width: 400px;
+  text-align: center;
+  background-color: #83B3D3;
+}
+
+.advantage-list {
+  display: flex;
+  justify-content: space-between; 
+  margin: 0;
+  padding: 0;
+}
+
+.advantage-item {
+  width: 400px;
+  text-align: center;
+}
+
+.advantage-second-house,
+.advantage-second-souvenir {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-third {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.advantage-title,
+.advantage-number,
+.advantage-description {
+  color: #ffffff;
+}
+
+.advantage-forth-area,
+.advantage-forth-tourists {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-forth-road {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.modal-search {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button-modal {
+  width: 575px;
+  height: 60px;
+  color: #ffffff;
+  background-color: rgba(117, 98, 87, 1);
+  border: none;
+  border-radius: 10px;
+}
+
+.subscription {
+  width: 1200px;
+  position: relative;
+}
+
+.subscription-item {
+  width: 800px;
+  position: absolute;
+  left: 200px;
+  text-align: center;
+}
+
+/*.subscription-item h3,
+.subscription-item p {
+  color: #ffffff;
+}*/
+
+.button-subscription {
+  color: #ffffff;
+}
+
+/*footer*/
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer-socials {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+/*page-calalog*/
+
+.catalog-sedona-image {
+  position: relative;
+}
+
+
+
+.filters-form-wrapper {
+  position:  absolute;
+  top:  60px;
+  color: #ffffff;
+}
+
+.filters-form-wrapper h1,
+.filters-form-wrapper p {
+  margin-left: 50px;
+}
+
+.filters-form {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+}
+
+.filters-form-first {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-left: 50px;
+}
+
+.filter-form-second {
+  display: flex;
+  width: 400px;
+  margin-top: 20px;
+}
+
+.filters-by-price {
+  border: none;
+}
+
+.filters-range {
+  margin-top: 15px;
+}
+
+.price-controls {
+  display: flex;
+}
+
+.price-controls input {
+  width: 120px;
+  height: 35px;
+  color: #ffffff;
+  background-color:  transparent;
+  border: 1px solid #ffffff;
+}
+
+.filters-button {
+  margin: 44px 0 0 50px;
+}
+
+.filters-btn {
+  width: 140px;
+  height: 40px;
+  font-size: 12px;
+  color:  #ffffff;
+}
+
+.filters-button-apply {
+  background-color: rgba(131, 179, 211, 1);
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight:  normal;
+}
+
+.filters-button-reset {
+  background-color:  transparent;
+  border: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight:  normal;
+}
+
+.sorting-block {
+  display: flex;
+  justify-content: space-between;
+  width: 1056px;
+  margin: 0 auto;
+}
+
+.sorting-button {
+  width: 200px;
+  height: 40px;
+}
+
+.sorting-list {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  width: 1056px;
+  margin: 0 auto;
+}
+
+.gallery-list {
+  display: flex;
+  border-bottom: 1px solid rgba(229, 229, 229, 1);
+}
+
+.gallery-item {
+  margin-left: 50px;
+}
+
+.gallery-hotel-info {
+  display: flex;
+}
+
+.gallery-details {
+  padding: 6px 17px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgba(117, 98, 87, 1);
+}
+
+.gallery-details a {
+  color: #ffffff;
+  text-decoration:  none;
+}
+
+.gallery-btn {
+  margin-left: 10px;
+  padding: 10px 17px;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgba(131, 179, 211, 1);
+  border: none;
+}
+
+.gallery-hotel-rating {
+  margin-left: auto;
+}
+
+.gallery-download {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(229, 229, 229, 1);
+}
+
+.download-btn {
+  width: 625px;
+  height: 55px;
+  color: #ffffff;
+  background-color: rgba(131, 179, 211, 1);
+  border: none;
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 1056px;
+}
+
+.slider-pagination-list {
+  display: flex;
+  list-style: none;
+  
+}
+
+.pagination-button-current {
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.slider-pagination-button {
+  margin-left: 5px;
+  width: 55px;
+  height: 55px;
+  color: #ffffff;
+  background-color: rgba(131, 179, 211, 1);
+  border: none;
+  border-radius: 4px;
+}
+
+.hotel-pages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+}
+
+.hotel-pagination-button {
+  width: 130px;
+  height: 40px;
+}
+
+.subscription-container {
+  width: 1056px;
+  height: 200px;
+}
+
+.page-subscription {
+  display: flex;
+}
+
+.page-subscription-input {
+  width: 600px;
+  height: 60px;
+  background-color: rgba(242, 242, 242, 1);
+  border: none;
+  border-radius: 10px;
+}
+
+.button-subscription {
+  width: 200px;
+  height: 60px;
+  background-color: rgba(131, 179, 211, 1);
+  border: none;
+  border-radius: 10px;
 }
