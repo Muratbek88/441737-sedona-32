@@ -36,7 +36,7 @@ body {
   line-height: 16px;
   font-weight: 700;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -46,31 +46,89 @@ body {
   margin: 0 auto; 
 }
 
+.visually-hidden {
+  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*header*/
 
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 1200px;
+  height: 70px;
 }
 
 .navigation-list {
-  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .navigation-user {
-  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.link-search,
+.link-like {
+  display: block;
+  width: 50px;
+}
+
+.navigation-link {
+  display: block;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link-entrance {
+  display: block;
+  width: 160px;
+  height: 37px;
+  color: #ffffff;
+  
+  line-height: 40px;
+  background-color: rgba(117, 98, 87, 1);
+  border-radius: 4px;
+}
+
+.navigation-link-logo {
+  display: block;
+}
+
+.navigation-user {
+  width: 300px;
 }
 
 .main-container {
   flex-grow: 1;
 }
 
-
 /*main-index*/
 
 .index-background {
+  display: block;
+  width: 1200px;
+  height: 485px;
   position: relative;
 }
 
@@ -88,8 +146,9 @@ body {
 }
 
 .vector-image {
+  display: block;
   position: absolute;
-  top: 474px;
+  top: 428px;
   width: 1200px;
   min-height: 57px;
   margin: 0 auto;
@@ -98,7 +157,16 @@ body {
 }
 
 .main-text {
-  text-align:  center;
+  width: 1200px;
+  height: 182px;
+  text-align: center;
+}
+
+.main-comment {
+  width: 620px;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
 .advantage-first {
@@ -113,21 +181,53 @@ body {
   background-color: #83B3D3;
 }
 
+.advantage-title {
+  margin-top: 100px;
+}
+
+.advantage-description {
+  width: 210px;
+  margin: 0 auto;
+}
+
 .advantage-list {
   display: flex;
   justify-content: space-between; 
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .advantage-item {
   width: 400px;
+  height: 384px;
   text-align: center;
 }
 
 .advantage-second-house,
 .advantage-second-souvenir {
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.icon-house,
+.icon-food,
+.icon-souvenir {
+  margin-top: 80px;
+}
+
+.advantage-item p {
+  width: 170px;
+  height: 73px;
+  margin: 0 auto;
+}
+
+.advantage-item .comment-food {
+  width: 215px;
+  height: 73px;
+}
+
+.advantage-item:nth-child(3) p {
+  width: 200px;
 }
 
 .advantage-third {
@@ -142,19 +242,50 @@ body {
   color: #ffffff;
 }
 
+.advantage-forth-area h3,
+.advantage-forth-road h3,
+.advantage-forth-tourists h3 {
+  margin-top: 80px;
+}
+
 .advantage-forth-area,
 .advantage-forth-tourists {
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-forth-area p + p {
+  width: 250px;
+  height: 73px;
 }
 
 .advantage-forth-road {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
+.advantage-forth-road .advantage-item-road {
+  width: 250px;
+  height: 73px;
+}
+
 .modal-search {
   width: 1200px;
+  height: 300px;
   margin: 0 auto;
   text-align: center;
+}
+
+.modal-search h2 {
+  width: 720px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.modal-search p {
+  width: 600px;
+  height: 37px;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .button-modal {
@@ -176,28 +307,71 @@ body {
   position: absolute;
   left: 200px;
   text-align: center;
+  margin-top: 100px;
 }
 
-/*.subscription-item h3,
-.subscription-item p {
+.subscription-item h3 {
+  width: 700px;
+  height: 50px;
   color: #ffffff;
-}*/
+  margin: 0 auto;
+  font-size: 30px;
+}
 
-.button-subscription {
+.subscription-item p {
+  width: 520px;
+  height: 72px;
   color: #ffffff;
+  margin: 0 auto;
+  font-size: 22px;
+}
+
+.page-subscription {
+  display: flex;
+}
+
+.page-subscription-input {
+  width: 600px;
+  height: 60px;
+  background-color: rgba(242, 242, 242, 1);
+  border: none;
+  border-radius: 10px;
+}
+.button-subscription {
+  width: 200px;
+  height: 60px;
+  background-color: rgba(131, 179, 211, 1);
+  border: none;
+  border-radius: 10px;
 }
 
 /*footer*/
 
 .footer-section {
+  width: 1200px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .page-footer-socials {
   display: flex;
   justify-content: space-between;
   width: 200px;
+  list-style: none;
+}
+
+.page-footer-telephone {
+  width: 350px;
+  height: 50px;
+  font-size: 40px;
+}
+
+.footer-copyright {
+  width: 115px;
+  height: 34px;
+  margin-right: 100px;
 }
 
 /*page-calalog*/
@@ -206,17 +380,22 @@ body {
   position: relative;
 }
 
-
-
 .filters-form-wrapper {
   position:  absolute;
-  top:  60px;
+  top: 60px;
   color: #ffffff;
 }
 
-.filters-form-wrapper h1,
+.filters-form-wrapper h1 {
+  font-size: 50px;
+  margin-top: 70px;
+  margin-left: 70px;
+}
+
 .filters-form-wrapper p {
-  margin-left: 50px;
+  width: 73px;
+  height: 21px;
+  margin-left: 115px;
 }
 
 .filters-form {
@@ -229,7 +408,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 400px;
-  margin-left: 50px;
+  margin-left: 70px;
 }
 
 .filter-form-second {
@@ -248,14 +427,24 @@ body {
 
 .price-controls {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .price-controls input {
   width: 120px;
   height: 35px;
   color: #ffffff;
-  background-color:  transparent;
+  background-color: transparent;
   border: 1px solid #ffffff;
+}
+
+.min-price input {
+  border-right: none;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .filters-button {
@@ -288,35 +477,83 @@ body {
 .sorting-block {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 1056px;
+  height: 100px;
   margin: 0 auto;
 }
 
-.sorting-button {
-  width: 200px;
+.sorting-block h2 {
+  width: 400px;
+  height: 40px;
+  font-size: 30px;
+}
+
+.sorting-type {
+  margin-left: 200px;
+}
+
+.select-control {
+  width: 250px;
   height: 40px;
 }
 
 .sorting-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 300px;
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+.sorting-link {
+  display: block;
+}
+
+.sorting-item button {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
 }
 
 .gallery {
   width: 1056px;
   margin: 0 auto;
+  margin-bottom: 30px;
+  border: 1px solid rgba(229, 229, 229, 1);
+  border-left: none;
+  border-right: none;
 }
 
 .gallery-list {
   display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-bottom: 1px solid rgba(229, 229, 229, 1);
 }
 
 .gallery-item {
-  margin-left: 50px;
+  width: 300px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  margin-left: 35px;
+}
+
+.gallery-title {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-hotel,
+.gallery-hotel-price {
+  display: inline-block;
+}
+
+.gallery-hotel-price {
+  margin-left: 55px;
+  margin-bottom: 35px;
 }
 
 .gallery-hotel-info {
@@ -324,8 +561,10 @@ body {
 }
 
 .gallery-details {
-  padding: 6px 17px;
+  width: 151px;
+  height: 37px;
   font-size: 12px;
+  line-height: 37px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -334,12 +573,13 @@ body {
 
 .gallery-details a {
   color: #ffffff;
-  text-decoration:  none;
+  text-decoration: none;
 }
 
 .gallery-btn {
+  width: 151px;
+  height: 37px;
   margin-left: 10px;
-  padding: 10px 17px;
   font-size: 12px;
   color: #ffffff;
   font-weight: 700;
@@ -350,13 +590,23 @@ body {
 }
 
 .gallery-hotel-rating {
+  align-self: flex-end;
   margin-left: auto;
+}
+
+.gallery-hotel-rating button {
+  width: 160px;
+  height: 37px;
+  color: #000000;
+  background-color: rgba(242, 242, 242, 1);
+  border: none;
 }
 
 .gallery-download {
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid rgba(229, 229, 229, 1);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .download-btn {
@@ -365,64 +615,113 @@ body {
   color: #ffffff;
   background-color: rgba(131, 179, 211, 1);
   border: none;
+  border-radius: 4px;
 }
 
 .slider-pagination {
   display: flex;
   justify-content: space-between;
   width: 1056px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 0;
 }
 
-.slider-pagination-list {
+.pagination-list {
   display: flex;
-  list-style: none;
-  
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.pagination-button-current {
-  background-color: rgba(242, 242, 242, 1);
-}
-
-.slider-pagination-button {
+.pagination-item {
   margin-left: 5px;
+}
+
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
   width: 55px;
   height: 55px;
-  color: #ffffff;
+  padding: 18px 24px;
+  font-weight: 700;
+  color: #000000;
   background-color: rgba(131, 179, 211, 1);
+  text-decoration: none;
   border: none;
   border-radius: 4px;
 }
 
-.hotel-pages {
+.pagination-current {
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.pagination-link-dotted {
+  padding: 15px 22px;
+}
+
+.pagination-link-last {
+  padding: 18px 18px;
+}
+
+.sorting-hotel-pages {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 350px;
+  width: 386px;
+  height: 48px;
 }
 
-.hotel-pagination-button {
+.select-hotel {
   width: 130px;
-  height: 40px;
+  height: 53px;
+  padding: 0;
+  padding-left: 10px;
+  border-radius: 4px;
 }
 
-.subscription-container {
+.subscription-block {
+  display: block;
   width: 1056px;
-  height: 200px;
+  height: 400px;
+  margin: 0 auto;
 }
 
-.page-subscription {
+.subscription-item-catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subscription-item-catalog h3 {
+  width: 720px;
+  height: 50px;
+  font-size: 30px;
+}
+
+.subscription-item-catalog p {
+  width: 520px;
+  height: 72px;
+  font-size: 22px;
+  line-height: 20px;
+}
+
+.subscription-form {
   display: flex;
 }
 
-.page-subscription-input {
+.subscription-input {
   width: 600px;
   height: 60px;
   background-color: rgba(242, 242, 242, 1);
   border: none;
   border-radius: 10px;
 }
-
-.button-subscription {
+.subscription-button {
   width: 200px;
   height: 60px;
   background-color: rgba(131, 179, 211, 1);

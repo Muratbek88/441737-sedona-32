@@ -11,19 +11,12 @@
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="about.html">
-                Главная
-              </a>
+              <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">
-                О Седоне
-              </a>
+              <a class="navigation-link" href="catalog.html">О Седоне</a>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="faq.html">
-                Гостиницы
-              </a>
+            <li class="navigation-item"><a class="navigation-link" href="hotels.html">Гостиницы</a>
             </li>
           </ul>
        
@@ -35,25 +28,17 @@
 
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="vissually-hidden">
-                  Поиск
-                </span>
+              <a class="navigation-link link-search" href="#">
+                <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="vissually-hidden">
-                  Сердечко
-                </span>
+              <a class="navigation-link link-like" href="#">
+                <span class="visually-hidden">Лайки</span>
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="vissually-hidden">
-                  Хочу сюда!
-                </span>
-              </a>
+              <a class="navigation-link link-entrance" href="#">Хочу сюда</a>
             </li>
           </ul>
         </nav>
@@ -113,9 +98,8 @@
                   <legend>Стоимость, ₽:</legend>
                   <div class="filters-range">
                     <div class="price-controls">
-                      <label class="min-price"><input name="min-price" type="text" value="0"></label> 
-                      <span>|</span>
-                      <label class="max-price"><input name="max-price" type="text" value="9000"></label>
+                      <label class="min-price"><input name="min-price-input" type="text" value="0"></label> 
+                      <label class="max-price"><input name="max-price-input" type="text" value="9000"></label>
                     </div>
                     <div class="range-controls">
                       <div class="scale">
@@ -138,18 +122,21 @@
 
         <section class="sorting-block">      
           <h2>Найдено гостиниц: 38</h2>
-          <div class="sorting-by-type">
-            <button class="sorting-button">Сначала дешевые</button>
-          </div>
+          <form class="sorting-type">
+            <label class="visually-hidden" for="sorting">Сортировка</label>
+            <select class="select-control" id="sorting" name="sorting">
+              <option value="popular">Сначала дешевые</option>
+            </select>
+          </form>
           <ul class="sorting-list">
             <li class="sorting-item">
-              <a class="sorting-link" href="#">Кнопка 1</a>
+              <a class="sorting-link" href="#"><button type="button"></button></a>
             </li>
             <li class="sorting-item">
-              <a class="sorting-link" href="#">Кнопка 2</a>
+              <a class="sorting-link" href="#"><button type="button"></button></a>
             </li>
             <li class="sorting-item">
-              <a class="sorting-link" href="#">Кнопка 3</a>
+              <a class="sorting-link" href="#"><button type="button"></button></a>
             </li>
           </ul>
         </section>
@@ -241,54 +228,44 @@
         </section>
 
         <section class="slider-pagination">
-          <ul class="slider-pagination-list">
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button pagination-button-current" type="button">
-                <span class="visually-hidden">1</span>
-              </button>
+          <ul class="pagination-list">
+            <li class="pagination-item">
+              <a class="pagination-link pagination-current">1</a>
             </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">2</span>
-              </button>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
             </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">3</span>
-              </button>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
             </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">4</span>
-              </button>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">4</a>
             </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">....</span>
-              </button>
+            <li class="pagination-item">
+              <a class="pagination-link pagination-link-dotted" href="#">...</a>
             </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">10</span>
-              </button>
+            <li class="pagination-item">
+              <a class="pagination-link pagination-link-last" href="#">10</a>
             </li>
           </ul>
-          <div class="hotel-pages">
-            <span class="hotel-pages-item">Гостиниц на странице:</span>
-            <span><button class="hotel-pagination-button" type="button">4</button></span>
-          </div>
+
+          <form class="sorting-hotel-pages">
+            <span class="sorting-hotel-item">Гостиниц на странице:</span>
+            <label class="visually-hidden" for="sorting-hotels">Сортировка гостиниц</label>
+            <select class="select-hotel" id="sorting-hotels" name="hotels">
+              <option value="popular">4</option>
+            </select>
+          </form>
         </section>
         
-        <section class="subscription-container">
-          <div class="subscription">
-            <div class="subscription-item">
-              <h3>Подпишитесь на рассылку</h3>
-              <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-              <form class="page-subscription">
-                <input class="page-subscription-input" type="text" name="subscribe">
-                <button class="button button-subscription" type="button">Подписаться</button>
-              </form>
-            </div>
+        <section class="subscription-block">
+          <div class="subscription-item-catalog">
+            <h3>Подпишитесь на рассылку</h3>
+            <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <form class="subscription-form">
+              <input class="subscription-input" type="text" name="subscription">
+              <button class="button subscription-button" type="button">Подписаться</button>
+            </form>
           </div>
         </section>
       </div>
@@ -298,15 +275,14 @@
       <div class="page-container">
         <section class="footer-section">
           <ul class="page-footer-socials">
-            <li><a class="social-button" href="#"><span class="visually-hidden">twitter</span></a></li>
-            <li><a class="social-button" href="#"><span class="visually-hidden">facebook</span></a></li>
-            <li><a class="social-button" href="#"><span class="visually-hidden">youtube</span></a></li>
+            <li><a class="social-button" href="#"><span class="vissually-hidden">twitter</span></a></li>
+            <li><a class="social-button" href="#"><span class="vissually-hidden">facebook</span></a></li>
+            <li><a class="social-button" href="#"><span class="vissually-hidden">youtube</span></a></li>
           </ul>
           <div>
             <span class="page-footer-telephone">+7 (812) 812-12-12</span>
           </div>
           <div class="footer-copyright">
-            <b>Website by</b>
             <a class="button" href="#">
               <img src="img/logo-htmlacademy.svg" width="115" height="34" alt="Логотип HTML Academy">
             </a>
