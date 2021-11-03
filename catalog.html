@@ -14,9 +14,10 @@
               <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">О Седоне</a>
+              <a class="navigation-link" href="about-sedona.html">О Седоне</a>
             </li>
-            <li class="navigation-item"><a class="navigation-link" href="hotels.html">Гостиницы</a>
+            <li class="navigation-item">
+              <a class="navigation-link link-hotels current-link-catalog" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
        
@@ -38,7 +39,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link link-entrance" href="#">Хочу сюда</a>
+              <a class="navigation-link link-entrance" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -60,16 +61,16 @@
                   <h3>Инфраструктура:</h3>
                   <ul class="filters-list">
                     <li class="filters-item">
-                      <input class="filters-input" type="checkbox" name="waterpool" id="filters-waterpool" checked>
+                      <input class="filters-input filters-input-checkbox" type="checkbox" name="waterpool" id="filters-waterpool" checked>
                       <label for="filters-waterpool">Бассейн</label>
                     </li>
                     <li class="filters-item">
-                      <input class="filters-input" type="checkbox" name="parking" id="filters-parking" checked>
+                      <input class="filters-input filters-input-checkbox" type="checkbox" name="parking" id="filters-parking" checked>
                       <label for="filters-parking">Парковка</label>                
                     </li>
                     <li class="filters-item">
-                      <input class="filters-input" type="checkbox" name="wi-fi" id="filters-wi-fi">
-                      <label for="filters-wi-fi">Wi-fi</label>                  
+                      <input class="filters-input filters-input-checkbox" type="checkbox" name="wi-fi" id="filters-wi-fi">
+                      <label for="filters-wi-fi">Wi-Fi</label>                  
                     </li>
                   </ul>
                 </div>
@@ -78,16 +79,16 @@
                   <h3>Тип жилья:</h3>
                   <ul class="filters-list">
                     <li class="filters-item">
-                      <input class="filters-input" type="radio" name="waterpool" id="filters-waterpool" checked>
-                      <label for="filters-waterpool">Гостиница</label>
+                      <input class="filters-input filters-input-radio" type="radio" name="radio" id="filters-hotel" value="1" checked>
+                      <label for="filters-hotel">Гостиница</label>
                     </li>
                     <li class="filters-item">
-                      <input class="filters-input" type="radio" name="parking" id="filters-parking">
-                      <label for="filters-parking">Мотель</label>                
+                      <input class="filters-input filters-input-radio" type="radio" name="radio" id="filters-motel" value="2">
+                      <label for="filters-motel">Мотель</label>                
                     </li>
                     <li class="filters-item">
-                      <input class="filters-input" type="radio" name="wi-fi" id="filters-wi-fi">
-                      <label for="filters-wi-fi">Апартаменты</label>                  
+                      <input class="filters-input filters-input-radio" type="radio" name="radio" id="filters-apartment" value="3">
+                      <label for="filters-apartment">Апартаменты</label>                  
                     </li>
                   </ul>
                 </div>
@@ -98,8 +99,13 @@
                   <legend>Стоимость, ₽:</legend>
                   <div class="filters-range">
                     <div class="price-controls">
-                      <label class="min-price"><input name="min-price-input" type="text" value="0"></label> 
-                      <label class="max-price"><input name="max-price-input" type="text" value="9000"></label>
+                      <label class="min-price" for="min-price-label">
+                        <input type="number" id="min-price-label" class="min-price-input" value="0"><span>от</span>
+                      </label>
+                      
+                      <label class="max-price" for="max-price-label">
+                        <input type="number" id="max-price-label" class="max-price-input" value="9000"><span>до</span>
+                      </label>
                     </div>
                     <div class="range-controls">
                       <div class="scale">
@@ -125,18 +131,18 @@
           <form class="sorting-type">
             <label class="visually-hidden" for="sorting">Сортировка</label>
             <select class="select-control" id="sorting" name="sorting">
-              <option value="popular">Сначала дешевые</option>
+              <option value="popular">Сначала дешёвые</option>
             </select>
           </form>
           <ul class="sorting-list">
             <li class="sorting-item">
-              <a class="sorting-link" href="#"><button type="button"></button></a>
+              <a class="sorting-link mode-tile" href="#"><button type="button"></button></a>
             </li>
             <li class="sorting-item">
-              <a class="sorting-link" href="#"><button type="button"></button></a>
+              <a class="sorting-link mode-slideshow" href="#"><button type="button"></button></a>
             </li>
             <li class="sorting-item">
-              <a class="sorting-link" href="#"><button type="button"></button></a>
+              <a class="sorting-link mode-list" href="#"><button type="button"></button></a>
             </li>
           </ul>
         </section>
@@ -157,7 +163,12 @@
               </div>
             </div>
             <div class="gallery-hotel-rating">
-              <p class="gallery-rating-stars"></p>
+              <div class="gallery-stars gallery-stars-first">
+                <p class="rating-star-first"></p>
+                <p class="rating-star-second"></p>
+                <p class="rating-star-third"></p>
+                <p class="rating-star-forth"></p>
+              </div>
               <button type="button" class="button">Рейтинг: 8,5</button>
             </div>    
           </section>
@@ -177,7 +188,11 @@
               </div>
             </div>
             <div class="gallery-hotel-rating">
-              <p class="gallery-rating-stars"></p>
+              <div class="gallery-stars gallery-stars-second">
+                <p class="rating-star-first"></p>
+                <p class="rating-star-second"></p>
+                <p class="rating-star-third"></p>
+              </div>
               <button type="button" class="button">Рейтинг: 8,9</button>
             </div>    
           </section>
@@ -197,7 +212,10 @@
               </div>
             </div>
             <div class="gallery-hotel-rating">
-              <p class="gallery-rating-stars"></p>
+              <div class="gallery-stars gallery-stars-third">
+                <p class="rating-star-first"></p>
+                <p class="rating-star-second"></p>
+              </div>
               <button type="button" class="button">Рейтинг: 9,2</button>
             </div>    
           </section>
@@ -217,7 +235,10 @@
               </div>
             </div>
             <div class="gallery-hotel-rating">
-              <p class="gallery-rating-stars"></p>
+              <div class="gallery-stars gallery-stars-forth">
+                <p class="rating-star-first"></p>
+                <p class="rating-star-second"></p>
+              </div>
               <button type="button" class="button">Рейтинг: 9,2</button>
             </div>    
           </section>
@@ -275,9 +296,9 @@
       <div class="page-container">
         <section class="footer-section">
           <ul class="page-footer-socials">
-            <li><a class="social-button" href="#"><span class="vissually-hidden">twitter</span></a></li>
-            <li><a class="social-button" href="#"><span class="vissually-hidden">facebook</span></a></li>
-            <li><a class="social-button" href="#"><span class="vissually-hidden">youtube</span></a></li>
+            <li><a class="social-button-tw" href="#"><span class="visually-hidden">twitter</span></a></li>
+            <li><a class="social-button-fb" href="#"><span class="visually-hidden">facebook</span></a></li>
+            <li><a class="social-button-yt" href="#"><span class="visually-hidden">youtube</span></a></li>
           </ul>
           <div>
             <span class="page-footer-telephone">+7 (812) 812-12-12</span>

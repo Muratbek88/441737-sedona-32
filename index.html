@@ -11,12 +11,13 @@
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="index.html">Главная</a>
+              <a class="navigation-link current-link-index" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">О Седоне</a>
+              <a class="navigation-link" href="about-sedona.html">О Седоне</a>
             </li>
-            <li class="navigation-item"><a class="navigation-link" href="hotels.html">Гостиницы</a>
+            <li class="navigation-item">
+              <a class="navigation-link link-hotels" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
        
@@ -38,7 +39,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link link-entrance" href="#">Хочу сюда</a>
+              <a class="navigation-link link-entrance" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -47,16 +48,18 @@
 
     <main class="main-container main-index">
       <div class="page-container">
-        <section class="index-background">
-          <h1 class="visually-hidden">«Sedona»</h1>
-          <img class="index-background-image" src="img/index-background.jpg" width="1200" height="485" alt="Горная местность «Sedona»">
-          <div class="welcome-image"></div>
-          <div class="vector-image"></div>
-        </section>
+        <section class="index-background-wrapper">
+          <div class="index-background">
+            <h1 class="visually-hidden">«Sedona»</h1>
+            <img class="index-background-image" src="img/index-background.jpg" width="1200" height="485" alt="Горная местность «Sedona»">
+            <div class="welcome-image"></div>
+            <div class="vector-image"></div>
+          </div>
 
-        <section class="main-text">
-          <h2 class="main-comment">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-          <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          <div class="main-text">
+            <h2 class="main-comment">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+            <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          </div>
         </section>
       
         <section class="advantages">
@@ -74,25 +77,25 @@
             <ul class="advantage-list">
               <li class="advantage-item advantage-second-house">
                 <img class="icon-house" src="img/icon-1.png" width="75" height="72" alt="Иконка жилье">
-                <h3>Жилье</h3>
+                <h3>Жильё</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li class="advantage-item">
+              <li class="advantage-item advantage-food-background">
                 <img class="icon-food" src="img/icon-2.png" width="74" height="70" alt="Иконка еда">
                 <h3>Еда</h3>
-                <p class="comment-food">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+                <p class="comment-food">Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li class="advantage-item advantage-second-souvenir">
                 <img class="icon-souvenir" src="img/icon-3.png" width="64" height="76" alt="Иконка сувенир">
                 <h3>Сувениры</h3>
-                <p>Не только китайского, <br>но и настоящего местного производства!</p>
+                <p>Не только китайского,<br>но и настоящего местного производства!</p>
               </li>
             </ul>
           </section>
         
           <section class="advantage-third">
             <aside class="advantage-third-item">
-              <h3 class="advantage-title">Там есть мост дьявола</h3>
+              <h3 class="advantage-title advantage-title-bridge">Там есть мост дьявола</h3>
               <p class="advantage-number">&#8212; №2 &#8212;</p>
               <p class="advantage-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </aside>
@@ -103,17 +106,17 @@
             <ul class="advantage-list">
               <li class="advantage-item advantage-forth-area">
                 <h3>Небольшая площадь</h3>
-                <p>&#8212; №3 &#8212;</p>
+                <p class="advantage-item-number">&#8212; №3 &#8212;</p>
                 <p>Все достопримечательности находятся очень близко</p>
               </li>
               <li class="advantage-item advantage-forth-road">
                 <h3>Красивая дорога</h3>
-                <p>&#8212; №4 &#8212;</p>
+                <p class="advantage-item-number">&#8212; №4 &#8212;</p>
                 <p class="advantage-item-road">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </li>
               <li class="advantage-item advantage-forth-tourists">
                 <h3>Мало туристов</h3>
-                <p>&#8212; №5 &#8212;</p>
+                <p class="advantage-item-number">&#8212; №5 &#8212;</p>
                 <p>Большинство едет в Гранд Каньон и толпится там</p>
               </li>
             </ul>
@@ -131,7 +134,7 @@
             <h3>Подпишитесь на рассылку</h3>
             <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="page-subscription">
-              <input class="page-subscription-input" type="text" name="subscribe">
+              <input class="page-subscription-input" type="text" name="subscribe" placeholder="Ваш e-mail">
               <button class="button button-subscription" type="button">Подписаться</button>
             </form>
           </div>
@@ -144,9 +147,9 @@
       <div class="page-container">
         <section class="footer-section">
           <ul class="page-footer-socials">
-            <li><a class="social-button" href="#"><span class="vissually-hidden">twitter</span></a></li>
-            <li><a class="social-button" href="#"><span class="vissually-hidden">facebook</span></a></li>
-            <li><a class="social-button" href="#"><span class="vissually-hidden">youtube</span></a></li>
+            <li><a class="social-button-tw" href="#"><span class="visually-hidden">twitter</span></a></li>
+            <li><a class="social-button-fb" href="#"><span class="visually-hidden">facebook</span></a></li>
+            <li><a class="social-button-yt" href="#"><span class="visually-hidden">youtube</span></a></li>
           </ul>
           <div>
             <span class="page-footer-telephone">+7 (812) 812-12-12</span>
