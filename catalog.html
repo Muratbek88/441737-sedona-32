@@ -21,7 +21,7 @@
               <a class="navigation-link link-hotels current-link-catalog" name="nav-hotels" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-       
+
           <div class="navigation-item-logo">
             <a class="navigation-link-logo" name="nav-logo" href="index.html">
               <img class="navigation-logo" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип.">
@@ -59,10 +59,10 @@
     <main class="main-container main-catalog">
       <div class="page-container">
         <div class="catalog-sedona-image">
-          <img src="img/catalog/catalog-background.jpg" width="1200" height="408" alt="Фон «Sedona».">
+          <img class="catalog-sedona-image" src="img/catalog/catalog-background.jpg" width="1200" height="408" alt="Фон «Sedona».">
         </div>
         <section class="filters">
-          <div class="filters-form-wrapper"> 
+          <div class="filters-form-wrapper">
             <h1>Гостиницы Седоны</h1>
             <div class="icon-house-svg">
               <a name="house" href="#">
@@ -72,24 +72,24 @@
                 </svg>
               </a>
             </div>
-            <div class="icon-bird"><a name="bird" href="#"></a></div>
+            <div class="icon-bird"><span class="visually-hidden">Иконка птички.</span></div>
             <p><a class="hotels-sorting-link" name="hotels-sorting" href="#">Гостиницы</a></p>
-            <form action="https://echo.htmlacademy.ru" class="filters-form"> 
-              <div class="filters-form-first"> 
+            <form action="https://echo.htmlacademy.ru" class="filters-form">
+              <div class="filters-form-first">
                 <div class="filters-infrastructure">
                   <h3>Инфраструктура:</h3>
                   <ul class="filters-list">
                     <li class="filters-item">
-                      <input class="filters-input filters-input-checkbox" type="checkbox" name="waterpool" id="filters-waterpool" checked>
+                      <input class="filters-input filters-input-checkbox" type="checkbox" name="checkbox" id="filters-waterpool" checked>
                       <label for="filters-waterpool">Бассейн</label>
                     </li>
                     <li class="filters-item">
-                      <input class="filters-input filters-input-checkbox" type="checkbox" name="parking" id="filters-parking" checked>
-                      <label for="filters-parking">Парковка</label>                
+                      <input class="filters-input filters-input-checkbox" type="checkbox" name="checkbox" id="filters-parking" checked>
+                      <label for="filters-parking">Парковка</label>
                     </li>
                     <li class="filters-item">
-                      <input class="filters-input filters-input-checkbox" type="checkbox" name="wi-fi" id="filters-wi-fi">
-                      <label for="filters-wi-fi">Wi-Fi</label>                  
+                      <input class="filters-input filters-input-checkbox" type="checkbox" name="checkbox" id="filters-wi-fi">
+                      <label for="filters-wi-fi">Wi-Fi</label>
                     </li>
                   </ul>
                 </div>
@@ -98,16 +98,16 @@
                   <h3>Тип жилья:</h3>
                   <ul class="filters-list">
                     <li class="filters-item">
-                      <input class="filters-input filters-input-radio" type="radio" name="radio" id="filters-hotel" value="1" checked>
+                      <input class="filters-input filters-input-radio" type="radio" name="radio" id="filters-hotel" checked>
                       <label for="filters-hotel">Гостиница</label>
                     </li>
                     <li class="filters-item">
-                      <input class="filters-input filters-input-radio" type="radio" name="radio" id="filters-motel" value="2">
-                      <label for="filters-motel">Мотель</label>                
+                      <input class="filters-input filters-input-radio" type="radio" name="radio" id="filters-motel">
+                      <label for="filters-motel">Мотель</label>
                     </li>
                     <li class="filters-item">
-                      <input class="filters-input filters-input-radio" type="radio" name="radio" id="filters-apartment" value="3">
-                      <label for="filters-apartment">Апартаменты</label>                  
+                      <input class="filters-input filters-input-radio" type="radio" name="radio" id="filters-apartment">
+                      <label for="filters-apartment">Апартаменты</label>
                     </li>
                   </ul>
                 </div>
@@ -119,11 +119,11 @@
                   <div class="filters-range">
                     <div class="price-controls">
                       <label class="min-price" for="min-price-label">
-                        <input type="number" id="min-price-label" name="from" class="min-price-input" value="0"><span>от</span>
+                        <input type="text" id="min-price-label" name="from" class="min-price-input" value="0"><span>от</span>
                       </label>
-                      
+
                       <label class="max-price" for="max-price-label">
-                        <input type="number" id="max-price-label" name="till" class="max-price-input" value="9000"><span>до</span>
+                        <input type="text" id="max-price-label" name="till" class="max-price-input" value="9000"><span>до</span>
                       </label>
                     </div>
                     <div class="range-controls">
@@ -135,8 +135,8 @@
                       </div>
                     </div>
                   </div>
-                </fieldset> 
-                
+                </fieldset>
+
                 <div class="filters-button">
                   <button class="button filters-btn filters-button-apply" type="submit">Применить</button>
                   <button class="button filters-btn filters-button-reset" type="reset">Сбросить</button>
@@ -145,9 +145,9 @@
             </form>
           </div>
         </section>
-        
+
         <section class="sorting-container">
-          <div class="sorting-block">      
+          <div class="sorting-block">
             <h2>Найдено гостиниц: 38</h2>
             <form action="https://echo.htmlacademy.ru" class="sorting-type">
               <label class="visually-hidden" for="sorting">Сортировка.</label>
@@ -181,7 +181,7 @@
                 <h3 class="gallery-title"><a name="hotel-name-Amara" href="#">Amara Resort & Spa</a></h3>
                 <span class="gallery-hotel">Гостиница</span>
                 <span class="gallery-hotel-price">От 4000 ₽</span>
-              
+
                 <div class="gallery-hotel-info">
                   <div class="gallery-details"><a name="hotel-details-Amara" href="#"><span>подробнее</span></a></div>
                   <div class="gallery-booking"><button class="button gallery-btn" type="submit"><span>в избранное</span></button></div>
@@ -195,9 +195,9 @@
                   <p class="rating-star-forth"></p>
                 </div>
                 <button type="button" class="button">Рейтинг: 8,5</button>
-              </div>    
+              </div>
             </section>
-  
+
             <section class="gallery-list">
               <div class="gallery-img">
                 <a name="gallery-hotel-2" href="#">
@@ -208,7 +208,7 @@
                 <h3 class="gallery-title"><a name="motel-name-Desert" href="#">Desert Quail Inn</a></h3>
                 <span class="gallery-hotel">Мотель</span>
                 <span class="gallery-hotel-price">От 3000 ₽</span>
-              
+
                 <div class="gallery-hotel-info">
                   <div class="gallery-details"><a name="motel-details-Desert" href="#"><span>подробнее</span></a></div>
                   <div class="gallery-booking"><button class="button gallery-btn" type="submit"><span>в избранное</span></button></div>
@@ -221,9 +221,9 @@
                   <p class="rating-star-third"></p>
                 </div>
                 <button type="button" class="button">Рейтинг: 8,9</button>
-              </div> 
+              </div>
             </section>
-  
+
             <section class="gallery-list">
               <div class="gallery-img">
                 <a name="gallery-hotel-3" href="#">
@@ -234,7 +234,7 @@
                 <h3 class="gallery-title"><a name="apartment-name-Villas" href="#">Villas at Poco Diablo</a></h3>
                 <span class="gallery-hotel">Апартаменты</span>
                 <span class="gallery-hotel-price">От 2000 ₽</span>
-              
+
                 <div class="gallery-hotel-info">
                   <div class="gallery-details"><a name="apartment-details-Villas" href="#"><span>подробнее</span></a></div>
                   <div class="gallery-booking"><button class="button gallery-btn in-selected" type="submit"><span>в избранном</span></button></div>
@@ -246,8 +246,8 @@
                   <p class="rating-star-second"></p>
               </div>
               <button type="button" class="button">Рейтинг: 9,2</button>
-            </section>    
-            
+            </section>
+
             <section class="gallery-list">
               <div class="gallery-img">
                 <a name="gallery-hotel-4" href="#">
@@ -258,7 +258,7 @@
                 <h3 class="gallery-title"><a name="hotel-name-GreenThree" href="#">GreenTree Inn</a></h3>
                 <span class="gallery-hotel">Гостиница</span>
                 <span class="gallery-hotel-price">От 3000 ₽</span>
-              
+
                 <div class="gallery-hotel-info">
                   <div class="gallery-details"><a name="hotel-details-GreenThree" href="#"><span>подробнее</span></a></div>
                   <div class="gallery-booking"><button class="button gallery-btn" type="submit"><span>в избранное</span></button></div>
@@ -270,9 +270,9 @@
                   <p class="rating-star-second"></p>
                 </div>
                 <button type="button" class="button">Рейтинг: 9,2</button>
-              </div>    
+              </div>
             </section>
-        
+
             <section class="gallery-download">
               <button class="button download-btn" type="submit">загрузить ещё</button>
             </section>
@@ -310,7 +310,7 @@
             </form>
           <div>
         </section>
-        
+
         <section class="subscription-container">
           <div class="subscription-block">
             <div class="subscription-item-catalog">
