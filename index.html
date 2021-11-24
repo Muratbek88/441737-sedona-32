@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
   </head>
   <body>
     <header class="page-header">
@@ -67,9 +67,8 @@
         <section class="index-background-wrapper">
           <div class="index-background">
             <h1 class="visually-hidden">«Sedona».</h1>
-            <img class="index-background-image" src="img/index-background.jpg" width="1200" height="485" alt="Горная местность «Sedona».">
-            <div class="welcome-image"></div>
-            <div class="vector-image"></div>
+            <div class="welcome-image"><span class="visually-hidden">Приветствие Седоны.</span></div>
+            <div class="vector-image"><span class="visually-hidden">Нижний вектор декор.</span></div>
           </div>
 
           <div class="main-text">
@@ -150,7 +149,8 @@
             <h3>Подпишитесь на рассылку</h3>
             <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form action="https://echo.htmlacademy.ru" class="page-subscription">
-              <input class="page-subscription-input" type="email" name="subscribe" placeholder="Ваш e-mail">
+              <label for="subcription-email"></label>
+              <input class="page-subscription-input" type="email" id="subcription-email" name="subscribe" placeholder="Ваш e-mail">
               <button class="button button-subscription" type="submit"><span>Подписаться</span></button>
             </form>
           </div>
@@ -186,7 +186,7 @@
                 <svg width="20" height="16" fill="none" role="img" aria-label="Значок Ютуба." xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#a)">
                     <path class="social-button" d="M17 0H2.9C1.2 0 0 1.5 0 3.2v9.5C0 14.5 1.2 16 2.9 16h14.3c1.5 0 2.9-1.5 2.9-3.2V3.2C19.9 1.5 18.7 0 17 0ZM7 11.8V4.2L13.7 8 7 11.8Z" fill="#83B3D3"/>
-                  </g><defs><clipPath id="a"><path fill="#fff" d="M0 0h20v16H0z"/></clipPath></defs>
+                  </g><defs><clipPath><path fill="#fff" d="M0 0h20v16H0z"/></clipPath></defs>
                 </svg>
                 <span class="visually-hidden">youtube.</span>
               </a>
@@ -209,7 +209,7 @@
     <div id="myModal" class="modal-container">
       <div class="modal">
         <button class="modal-close-button">
-          <svg width="53" height="53" fill="none" role="pop-up" aria-label="Модульное окно." xmlns="http://www.w3.org/2000/svg">
+          <svg width="53" height="53" fill="none" aria-label="Модульное окно." xmlns="http://www.w3.org/2000/svg">
             <circle cx="26.5" cy="26.5" r="26.5" fill="#F2F2F2"/>
             <path d="M33 21.2 31.8 20l-5.3 5.3-5.3-5.3-1.2 1.2 5.3 5.3-5.3 5.3 1.2 1.2 5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3 5.3-5.3Z" fill="#000"/>
           </svg>
@@ -221,32 +221,31 @@
 
             <p class="field-group">
               <label for="enter">Дата заезда:</label>
-              <input class="form-field-first field" type="datetime" id="enter" name="enter" value="27 апреля 2020">
+              <input class="form-field-first field" type="text" id="enter" name="enter" value="27 апреля 2020">
               <span>Мы не можем отправить вас в прошлое.</span>
             </p>
 
             <p class="field-group">
               <label for="exit">Дата выезда:</label>
-              <input class="form-field-second field" type="datetime" id="exit" name="exit" value="1 сентября 2021">
-              <span>На эти даты есть свободные номера. Пока есть.</span>
+              <input class="form-field-second field" type="text" id="exit" name="exit" value="1 сентября 2021">
+              <span class="field-info-second">На эти даты есть свободные номера. Пока есть.</span>
             </p>
 
             <div class="field-pagination">
               <p class="field-pagination-adult adult-field">
-                <label for="adult">Взрослые:</label>
-                <input class="button-pagination button-prev" type="button" id="adult" name="adult" value="&#x2212;">
-                <input class="button-pagination count-adults" type="button" id="adult" name="adult" value="2">
-                <input class="button-pagination button-next" type="button" id="adult" name="adult" value="+">
+                <label for="adult-quantity">Взрослые:</label>
+                <input class="button-pagination button-prev" type="button" name="adult" value="&#x2212;">
+                <input class="button-pagination count-adults" type="button" id="adult-quantity" name="adult" value="2">
+                <input class="button-pagination button-next" type="button" name="adult" value="+">
               </p>
 
               <p class="field-pagination-children">
-                <label for="children">Дети:</label>
-                <input class="button-pagination button-prev" type="button" id="children" name="children" value="&#x2212;">
-                <input class="button-pagination count-children" type="button" id="children" name="children" value="1">
-                <input class="button-pagination button-next" type="button" id="children" name="children" value="+">
+                <label for="children-quantity">Дети:</label>
+                <input class="button-pagination button-prev" type="button" name="children" value="&#x2212;">
+                <input class="button-pagination count-children" type="button" id="children-quantity" name="children" value="1">
+                <input class="button-pagination button-next" type="button" name="children" value="+">
               </p>
             </div>
-            <button class="button button-search" type="submit"><span>Найти</span></button>
           </form>
         </section>
       </div>

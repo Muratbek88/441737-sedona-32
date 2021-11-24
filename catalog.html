@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Каталог Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
   </head>
   <body>
     <header class="page-header">
@@ -58,9 +58,6 @@
 
     <main class="main-container main-catalog">
       <div class="page-container">
-        <div class="catalog-sedona-image">
-          <img class="catalog-sedona-image" src="img/catalog/catalog-background.jpg" width="1200" height="408" alt="Фон «Sedona».">
-        </div>
         <section class="filters">
           <div class="filters-form-wrapper">
             <h1>Гостиницы Седоны</h1>
@@ -76,6 +73,7 @@
             <p><a class="hotels-sorting-link" name="hotels-sorting" href="#">Гостиницы</a></p>
             <form action="https://echo.htmlacademy.ru" class="filters-form">
               <div class="filters-form-first">
+                <h2 class="visually-hidden">Поиска гостиниц в «Sedona».</h2>
                 <div class="filters-infrastructure">
                   <h3>Инфраструктура:</h3>
                   <ul class="filters-list">
@@ -157,13 +155,13 @@
             </form>
             <ul class="sorting-list">
               <li class="sorting-item">
-                <a class="sorting-link mode-tile" name="mode-tile-link" href="#"><button type=button><span class="visually-hidden">Кнопка-1.</span></button></a>
+                <button class="sorting-link mode-tile" type="button"><span class="visually-hidden">Кнопка-1.</span></button>
               </li>
               <li class="sorting-item">
-                <a class="sorting-link mode-slideshow" name="mode-slideshow-link" href="#"><button type="button"><span class="visually-hidden">Кнопка-2.</span></button></a>
+                <button class="sorting-link mode-slideshow" type="button"><span class="visually-hidden">Кнопка-2.</span></button>
               </li>
               <li class="sorting-item">
-                <a class="sorting-link mode-list" name="mode-list-link" href="#"><button type="button"><span class="visually-hidden">Кнопка-3.</span></button></a>
+                <button class="sorting-link mode-list" type="button"><span class="visually-hidden">Кнопка-3.</span></button>
               </li>
             </ul>
           </div>
@@ -244,8 +242,9 @@
                 <div class="gallery-stars gallery-stars-third">
                   <p class="rating-star-first"></p>
                   <p class="rating-star-second"></p>
+                </div>
+                <button type="button" class="button">Рейтинг: 9,2</button>
               </div>
-              <button type="button" class="button">Рейтинг: 9,2</button>
             </section>
 
             <section class="gallery-list">
@@ -308,7 +307,7 @@
                 <option value="popular">4</option>
               </select>
             </form>
-          <div>
+          </div>
         </section>
 
         <section class="subscription-container">
@@ -353,7 +352,7 @@
                 <svg width="20" height="16" fill="none" role="img" aria-label="Значек Ютуба." xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#a)">
                     <path class="social-button" d="M17 0H2.9C1.2 0 0 1.5 0 3.2v9.5C0 14.5 1.2 16 2.9 16h14.3c1.5 0 2.9-1.5 2.9-3.2V3.2C19.9 1.5 18.7 0 17 0ZM7 11.8V4.2L13.7 8 7 11.8Z" fill="#83B3D3"/>
-                  </g><defs><clipPath id="a"><path fill="#fff" d="M0 0h20v16H0z"/></clipPath></defs>
+                  </g><defs><clipPath><path fill="#fff" d="M0 0h20v16H0z"/></clipPath></defs>
                 </svg>
                 <span class="visually-hidden">youtube.</span>
               </a>
